@@ -59,4 +59,4 @@ def build_tree():
 
 if __name__ == "__main__":
     ct = build_tree()
-    ct.print_hierarchy("designation")
+    ct.print_hierarchy("both")

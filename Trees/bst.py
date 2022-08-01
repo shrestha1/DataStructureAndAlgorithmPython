@@ -78,6 +78,25 @@ class BinarySearchTree:
         elements.append(self.data)
 
         return elements
+    
+    def search(self, val):
+        if self.data == val:
+            print(self.data)
+            return True
+        
+        # Search in left SubTree
+        if val < self.data:
+            if self.left:
+                self.left.search(val)
+            else:
+                return False
+
+        # Search in right SubTree
+        if val > self.data:
+            if self.right:
+                self.right.search(val)
+            else:
+                return False
 
 def build_tree(elements):
     root = BinarySearchTree(elements[0])
@@ -91,6 +110,7 @@ if __name__ == "__main__":
     numbers = [17, 4, 1, 20, 9, 23, 18, 34]
     numbers_tree = build_tree(numbers)
 
-    print(numbers_tree.inorder_traversal())
-    print(numbers_tree.preorder_traversal())
-    print(numbers_tree.postorder_traversal())
+    # print(numbers_tree.inorder_traversal())
+    # print(numbers_tree.preorder_traversal())
+    # print(numbers_tree.postorder_traversal())
+    print(numbers_tree.search(22))

@@ -1,5 +1,13 @@
+'''
+
+# @brief: interpolation algorithm
+
+The worst-case performance of this algorithm is O(N) and if the data is
+somewhat reasonably uniform, the best performance is O(log(log N)).
+
+'''
+
 def interpolationSearch(list:list, n:int or float):
-    found = False
     idx0 = 0
     idxn = len(list)-1
     #using the concept of interpolation

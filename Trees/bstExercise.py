@@ -109,7 +109,7 @@ class BinarySearchTree:
 
         return self.data + left_sum + right_sum
         
-
+    
 def build_tree(elements):
     root = BinarySearchTree(elements[0])
     
